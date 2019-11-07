@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style media="screen">
+  body{
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+  }
+    a{
+    color:white;
+    }
+
+  .center{
+  height:100vh;
+  }
+</style>
+
+  </head>
+  <body>
+    <audio id = 'audio' controls autoplay>
+      <source src="Bamboo.mp3">
+    </audio>
+
+    <div class="center d-flex justify-content-center align-items-center">
+      <h1 class = display-1 id="demo"></h1>
+    </div>
+
+  </body>
+
+
+  <script>
+    var subject;
+    window.addEventListener("load", function(){
+    subject = prompt("What is the subject?");
+    searchSub = subject.replace(/ /g,"+");
+
+
+
+    document.getElementById("demo").innerHTML += `<a href=http://www.google.com/search?q=${searchSub} target="_blank"> ${subject} </a>`;
+
+    });
+
+    window.addEventListener("load", function(){
+    document.body.style.backgroundColor = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+    });
+
+
+  </script>
+
+</html>

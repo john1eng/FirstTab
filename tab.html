@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style media="screen">
+  body{
+    background-color: lightblue;
+    color: white;
+  }
+
+  .center{
+  height:100vh;
+  }
+</style>
+
+  </head>
+  <body>
+    <div class="center d-flex justify-content-center align-items-center">
+      <h1 id="demo"></h1>
+    </div>
+
+  </body>
+
+
+  <script>
+    window.addEventListener("load", function(){
+    document.body.style.backgroundColor = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+    });
+
+    var href = window.location.href;
+    var sign = href.indexOf('?');
+    var text = href.substring(sign+1).replace(/%20/g," ");
+    document.getElementById("demo").innerHTML = text;
+
+  </script>
+
+</html>
