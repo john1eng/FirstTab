@@ -18,7 +18,9 @@ data.forEach(myFunction);
 function myFunction(item, index)
 {
 var htmlString ="";
-htmlString += `<li>${data[index].key}</li>`;
+searchSub = data[index].key.replace(/ /g,"+");
+
+htmlString += `<li><a href=http://www.google.com/search?q=${searchSub} target="_blank"> ${data[index].key}</a></li>`;
 pull_data.insertAdjacentHTML('afterbegin',htmlString);
 }
 
