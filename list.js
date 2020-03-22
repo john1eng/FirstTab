@@ -22,7 +22,7 @@ console.log(data[index].key);
 
 searchSub = data[index].key;
 if(searchSub!=null)
-searchSub.replace(/''/g,"+");
+searchSub = searchSub.replace(/\s/g,"+");
 
 htmlString += `<li><a href=http://www.google.com/search?q=${searchSub} target="_blank"> ${data[index].key}</a></li>`;
 pull_data.insertAdjacentHTML('afterbegin',htmlString);
